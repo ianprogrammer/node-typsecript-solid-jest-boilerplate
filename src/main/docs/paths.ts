@@ -1,7 +1,7 @@
 import {
-  loginPath,
+  loginPath
 } from './paths/'
 
 export default {
-  '/login': loginPath,
+  '/login': loginPath
 }
