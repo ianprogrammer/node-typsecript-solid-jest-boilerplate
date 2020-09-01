@@ -1,5 +1,5 @@
 import { Controller, HttpRequest, HttpResponse, Validation } from './login-controller-protocols'
-import { badRequest, serverError, unauthorized, ok } from '@/presentation/helpers/http/http-helper'
+import { badRequest, serverError, ok } from '@/presentation/helpers/http/http-helper'
 
 export class LoginController implements Controller {
   constructor(
@@ -12,7 +12,6 @@ export class LoginController implements Controller {
       if (error) {
         return badRequest(error)
       }
-      const { email, password } = httpRequest.body
 
       return ok({ message: 'ok' })
     } catch (error) {
